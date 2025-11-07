@@ -2,16 +2,18 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: prospector
-      url-base: https://github.com/t-ogura
+    - name: kot149
+      url-base: https://github.com/kot149
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: prospector-zmk-module
-      remote: prospector
-      revision: v1.1.1
-      path: modules/prospector-scanner-zmk-module
+
+    # https://github.com/kot149/prospector-scanner-zmk-module
+    - name: prospector-scanner-zmk-module
+      remote: kot149
+      revision: main
+      path: modules/prospector-scanner-zmk-module-kot149
   self:
     path: config
